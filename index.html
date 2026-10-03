@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Tuition Classes | 3D Experience</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0f1d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- 3D Background Canvas -->
+    <div id="canvas-container"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0f1d]/80 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-wider text-blue-500">EXCELLENCE<span class="text-amber-400">TUITION</span></div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+            <a href="#home" class="hover:text-blue-400 transition">Home</a>
+            <a href="#courses" class="hover:text-blue-400 transition">Courses</a>
+            <a href="#students" class="hover:text-blue-400 transition">Top Students</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-blue-500/30">Book Demo</a>
+    </nav>
+
+    <!-- 1. Home / Hero Section -->
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl leading-tight">
+            Transforming Curiosity into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">Brilliance</span>
+        </h1>
+        <p class="mt-4 text-gray-400 max-w-xl text-base md:text-lg">
+            Advanced conceptual learning with expert mentors, smart batches, and trackable student success.
+        </p>
+        <div class="mt-8 flex gap-4">
+            <a href="#courses" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-600/40">Explore Courses</a>
+            <a href="#students" class="bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 px-8 py-3 rounded-xl font-semibold transition">Star Students</a>
+        </div>
+    </section>
+
+    <!-- 2. Courses Section -->
+    <section id="courses" class="py-24 px-6 md:px-16 relative z-10 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Our Specialized <span class="text-blue-400">Batches</span></h2>
+            <p class="text-gray-400 mt-2">Designed for absolute mastery and top board/exam results.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Course Card 1 -->
+            <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2">
+                <div class="text-blue-400 text-3xl mb-4 font-bold">01</div>
+                <h3 class="text-xl font-bold mb-2">Foundation Science (9th - 10th)</h3>
+                <p class="text-gray-400 text-sm mb-6">Strong conceptual clarity in Physics, Chemistry, and Mathematics with regular practice tests.</p>
+                <span class="text-amber-400 font-semibold text-sm">Limited Seats Available</span>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2">
+                <div class="text-blue-400 text-3xl mb-4 font-bold">02</div>
+                <h3 class="text-xl font-bold mb-2">Senior Secondary (11th - 12th)</h3>
+                <p class="text-gray-400 text-sm mb-6">Advanced problem solving and intensive board exam preparation with personal doubt clearing.</p>
+                <span class="text-amber-400 font-semibold text-sm">Batch Starting Soon</span>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2">
+                <div class="text-blue-400 text-3xl mb-4 font-bold">03</div>
+                <h3 class="text-xl font-bold mb-2">Competitive Entrance Prep</h3>
+                <p class="text-gray-400 text-sm mb-6">Targeted shortcuts, analytical skills, and rigorous mock test series for top aspirations.</p>
+                <span class="text-amber-400 font-semibold text-sm">Enrollment Open</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Students Star Wall (Students Cards & Portfolio Triggers) -->
+    <section id="students" class="py-24 px-6 md:px-16 relative z-10 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Star <span class="text-amber-400">Performers</span></h2>
+            <p class="text-gray-400 mt-2">Click on any student card to view their complete academic portfolio.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Student Card 1 -->
+            <div onclick="openPortfolio('Aman Sharma', 'Class 12th - Science', '98.4% in Board Exams', 'Aman is an exceptional student who mastered physics problem-solving and scored highest in district mock exams.')" 
+                 class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white">AS</div>
+                <h3 class="text-lg font-bold">Aman Sharma</h3>
+                <p class="text-blue-400 text-sm">Class 12th Topper</p>
+                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">Score: 98.4%</div>
+            </div>
+            <!-- Student Card 2 -->
+            <div onclick="openPortfolio('Priya Verma', 'Class 10th', '97.2% Aggregate', 'Priya demonstrated unmatched consistency in mathematics and science Olympiads throughout the year.')" 
+                 class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white">PV</div>
+                <h3 class="text-lg font-bold">Priya Verma</h3>
+                <p class="text-blue-400 text-sm">Class 10th Scholar</p>
+                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">Score: 97.2%</div>
+            </div>
+            <!-- Student Card 3 -->
+            <div onclick="openPortfolio('Rahul Rathore', 'Entrance Batch', '99.1 Percentile', 'Rahul focused heavily on conceptual application, translating hard work into top-tier entrance exam success.')" 
+                 class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white">RR</div>
+                <h3 class="text-lg font-bold">Rahul Rathore</h3>
+                <p class="text-blue-400 text-sm">Competitive Star</p>
+                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">Score: 99.1%ile</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Individual Student Portfolio Modal Setup -->
+    <div id="portfolioModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden justify-center items-center px-4">
+        <div class="bg-gray-900 border border-gray-800 w-full max-w-lg p-8 rounded-3xl relative shadow-2xl">
+            <button onclick="closePortfolio()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+            <div id="modalContent">
+                <!-- Dynamic Content Will Insert Here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-16 relative z-10 max-w-3xl mx-auto">
+        <div class="bg-gray-900/60 border border-gray-800 p-8 md:p-12 rounded-3xl backdrop-blur-md">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold">Get in <span class="text-blue-400">Touch</span></h2>
+                <p class="text-gray-400 text-sm mt-2">Book a free demo session or inquire about admissions.</p>
+            </div>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry sent successfully!');">
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Your Name</label>
+                    <input type="text" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500" placeholder="Enter full name">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Phone Number</label>
+                    <input type="tel" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500" placeholder="Enter mobile number">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Select Class / Batch</label>
+                    <select class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                        <option>Foundation Science (9th - 10th)</option>
+                        <option>Senior Secondary (11th - 12th)</option>
+                        <option>Competitive Entrance Prep</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl transition shadow-lg shadow-blue-600/30">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center border-t border-gray-800 text-gray-500 text-sm relative z-10">
+        &copy; 2026 Excellence Tuition Classes. All Rights Reserved.
+    </footer>
+
+    <!-- Three.js and GSAP Scripts for 3D Interaction -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // 1. Three.js Background Particle Setup
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+
+        // Create floating geometric particles
+        const geometry = new THREE.IcosahedronGeometry(1, 0);
+        const material = new THREE.MeshStandardMaterial({ 
+            color: 0x3b82f6, 
+            wireframe: true,
+            roughness: 0.4 
+        });
+
+        const particlesGroup = new THREE.Group();
+        for (let i = 0; i < 30; i++) {
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.position.set(
+                (Math.random() - 0.5) * 30,
+                (Math.random() - 0.5) * 30,
+                (Math.random() - 0.5) * 30
+            );
+            const scale = Math.random() * 1.5 + 0.5;
+            mesh.scale.set(scale, scale, scale);
+            particlesGroup.add(mesh);
+        }
+        scene.add(particlesGroup);
+
+        // Add Light
+        const light = new THREE.DirectionalLight(0xffffff, 2);
+        light.position.set(5, 5, 5);
+        scene.add(light);
+        scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+
+        camera.position.z = 10;
+
+        // Mouse Move Parallax Effect
+        let mouseX = 0, mouseY = 0;
+        window.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+        });
+
+        // Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            particlesGroup.rotation.x += 0.001;
+            particlesGroup.rotation.y += 0.002;
+
+            // Camera follow mouse smoothly
+            camera.position.x += (mouseX * 2 - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY * 2 - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // 2. Student Portfolio Modal Functions
+        function openPortfolio(name, batch, score, bio) {
+            const modal = document.getElementById('portfolioModal');
+            const content = document.getElementById('modalContent');
+            
+            content.innerHTML = `
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-3xl font-bold justify-center text-white shadow-lg">${name.split(' ').map(n => n[0]).join('')}</div>
+                    <h2 class="text-2xl font-bold">${name}</h2>
+                    <p class="text-blue-400 text-sm mt-1">${batch}</p>
+                    <div class="my-4 inline-block bg-amber-400/10 text-amber-400 px-4 py-1.5 rounded-full text-sm font-semibold border border-amber-400/20">${score}</div>
+                    <p class="text-gray-300 text-sm leading-relaxed bg-gray-950 p-4 rounded-xl border border-gray-800 text-left mt-2">${bio}</p>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closePortfolio() {
+            const modal = document.getElementById('portfolioModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
