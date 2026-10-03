@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0a0f1d;
+            background-color: #050b14; /* Slightly deeper rich dark blue/black background */
             color: #ffffff;
             overflow-x: hidden;
         }
@@ -29,7 +29,7 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0a0f1d;
+            background: #050b14;
         }
         ::-webkit-scrollbar-thumb {
             background: #3b82f6;
@@ -43,7 +43,7 @@
     <div id="canvas-container"></div>
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0f1d]/80 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex justify-between items-center">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#050b14]/80 backdrop-blur-md border-b border-gray-800/80 px-6 py-4 flex justify-between items-center">
         <div class="text-xl font-bold tracking-wider text-blue-500">EXCELLENCE<span class="text-amber-400">TUITION</span></div>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
             <a href="#home" class="hover:text-blue-400 transition">Home</a>
@@ -64,7 +64,7 @@
         </p>
         <div class="mt-8 flex gap-4">
             <a href="#courses" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-600/40">Explore Courses</a>
-            <a href="#students" class="bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 px-8 py-3 rounded-xl font-semibold transition">Star Students</a>
+            <a href="#students" class="bg-gray-900/80 hover:bg-gray-800 text-gray-200 border border-gray-700 px-8 py-3 rounded-xl font-semibold transition backdrop-blur-md">Star Students</a>
         </div>
     </section>
 
@@ -76,21 +76,21 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Course Card 1 -->
-            <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2">
+            <div class="bg-gray-900/60 border border-gray-800/80 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2 shadow-xl">
                 <div class="text-blue-400 text-3xl mb-4 font-bold">01</div>
                 <h3 class="text-xl font-bold mb-2">Foundation Science (9th - 10th)</h3>
                 <p class="text-gray-400 text-sm mb-6">Strong conceptual clarity in Physics, Chemistry, and Mathematics with regular practice tests.</p>
                 <span class="text-amber-400 font-semibold text-sm">Limited Seats Available</span>
             </div>
             <!-- Course Card 2 -->
-            <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2">
+            <div class="bg-gray-900/60 border border-gray-800/80 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2 shadow-xl">
                 <div class="text-blue-400 text-3xl mb-4 font-bold">02</div>
                 <h3 class="text-xl font-bold mb-2">Senior Secondary (11th - 12th)</h3>
                 <p class="text-gray-400 text-sm mb-6">Advanced problem solving and intensive board exam preparation with personal doubt clearing.</p>
                 <span class="text-amber-400 font-semibold text-sm">Batch Starting Soon</span>
             </div>
             <!-- Course Card 3 -->
-            <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2">
+            <div class="bg-gray-900/60 border border-gray-800/80 p-8 rounded-2xl backdrop-blur-md hover:border-blue-500/50 transition transform hover:-translate-y-2 shadow-xl">
                 <div class="text-blue-400 text-3xl mb-4 font-bold">03</div>
                 <h3 class="text-xl font-bold mb-2">Competitive Entrance Prep</h3>
                 <p class="text-gray-400 text-sm mb-6">Targeted shortcuts, analytical skills, and rigorous mock test series for top aspirations.</p>
@@ -108,27 +108,27 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Student Card 1 -->
             <div onclick="openPortfolio('Aman Sharma', 'Class 12th - Science', '98.4% in Board Exams', 'Aman is an exceptional student who mastered physics problem-solving and scored highest in district mock exams.')" 
-                 class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center">
-                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white">AS</div>
+                 class="bg-gray-900/70 border border-gray-800/80 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center backdrop-blur-md shadow-xl">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white shadow-lg">AS</div>
                 <h3 class="text-lg font-bold">Aman Sharma</h3>
                 <p class="text-blue-400 text-sm">Class 12th Topper</p>
-                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">Score: 98.4%</div>
+                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">Score: 98.4%</div>
             </div>
             <!-- Student Card 2 -->
             <div onclick="openPortfolio('Priya Verma', 'Class 10th', '97.2% Aggregate', 'Priya demonstrated unmatched consistency in mathematics and science Olympiads throughout the year.')" 
-                 class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center">
-                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white">PV</div>
+                 class="bg-gray-900/70 border border-gray-800/80 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center backdrop-blur-md shadow-xl">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white shadow-lg">PV</div>
                 <h3 class="text-lg font-bold">Priya Verma</h3>
                 <p class="text-blue-400 text-sm">Class 10th Scholar</p>
-                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">Score: 97.2%</div>
+                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">Score: 97.2%</div>
             </div>
             <!-- Student Card 3 -->
             <div onclick="openPortfolio('Rahul Rathore', 'Entrance Batch', '99.1 Percentile', 'Rahul focused heavily on conceptual application, translating hard work into top-tier entrance exam success.')" 
-                 class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center">
-                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white">RR</div>
+                 class="bg-gray-900/70 border border-gray-800/80 p-6 rounded-2xl cursor-pointer hover:border-amber-400/50 transition transform hover:scale-105 text-center backdrop-blur-md shadow-xl">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white shadow-lg">RR</div>
                 <h3 class="text-lg font-bold">Rahul Rathore</h3>
                 <p class="text-blue-400 text-sm">Competitive Star</p>
-                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">Score: 99.1%ile</div>
+                <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">Score: 99.1%ile</div>
             </div>
         </div>
     </section>
@@ -145,7 +145,7 @@
 
     <!-- 5. Contact Section -->
     <section id="contact" class="py-24 px-6 md:px-16 relative z-10 max-w-3xl mx-auto">
-        <div class="bg-gray-900/60 border border-gray-800 p-8 md:p-12 rounded-3xl backdrop-blur-md">
+        <div class="bg-gray-900/70 border border-gray-800/80 p-8 md:p-12 rounded-3xl backdrop-blur-md shadow-2xl">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold">Get in <span class="text-blue-400">Touch</span></h2>
                 <p class="text-gray-400 text-sm mt-2">Book a free demo session or inquire about admissions.</p>
@@ -173,7 +173,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-center border-t border-gray-800 text-gray-500 text-sm relative z-10">
+    <footer class="py-8 text-center border-t border-gray-800/80 text-gray-500 text-sm relative z-10">
         &copy; 2026 Excellence Tuition Classes. All Rights Reserved.
     </footer>
 
@@ -183,44 +183,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script>
-        // 1. Three.js Background Particle Setup
+        // 1. Updated Three.js Background: Glowing 3D Spheres & Particles
         const container = document.getElementById('canvas-container');
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         container.appendChild(renderer.domElement);
 
-        // Create floating geometric particles
-        const geometry = new THREE.IcosahedronGeometry(1, 0);
-        const material = new THREE.MeshStandardMaterial({ 
-            color: 0x3b82f6, 
-            wireframe: true,
-            roughness: 0.4 
-        });
-
+        // Create glowing spheres instead of wireframes
+        const geometry = new THREE.SphereGeometry(0.8, 32, 32);
+        
         const particlesGroup = new THREE.Group();
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 40; i++) {
+            // Mix of Blue and Gold glowing materials
+            const isGold = i % 4 === 0;
+            const material = new THREE.MeshStandardMaterial({ 
+                color: isGold ? 0xf59e0b : 0x3b82f6, 
+                roughness: 0.2,
+                metalness: 0.8,
+                emissive: isGold ? 0x78350f : 0x1d4ed8,
+                emissiveIntensity: 0.3
+            });
+
             const mesh = new THREE.Mesh(geometry, material);
             mesh.position.set(
-                (Math.random() - 0.5) * 30,
-                (Math.random() - 0.5) * 30,
-                (Math.random() - 0.5) * 30
+                (Math.random() - 0.5) * 35,
+                (Math.random() - 0.5) * 35,
+                (Math.random() - 0.5) * 35
             );
-            const scale = Math.random() * 1.5 + 0.5;
+            const scale = Math.random() * 0.8 + 0.3;
             mesh.scale.set(scale, scale, scale);
             particlesGroup.add(mesh);
         }
         scene.add(particlesGroup);
 
-        // Add Light
-        const light = new THREE.DirectionalLight(0xffffff, 2);
-        light.position.set(5, 5, 5);
-        scene.add(light);
-        scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+        // Add Lights for realistic shine
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+        scene.add(ambientLight);
 
-        camera.position.z = 10;
+        const pointLight = new THREE.PointLight(0x3b82f6, 3, 50);
+        pointLight.position.set(10, 10, 10);
+        scene.add(pointLight);
+
+        camera.position.z = 12;
 
         // Mouse Move Parallax Effect
         let mouseX = 0, mouseY = 0;
@@ -232,12 +240,12 @@
         // Animation Loop
         function animate() {
             requestAnimationFrame(animate);
-            particlesGroup.rotation.x += 0.001;
-            particlesGroup.rotation.y += 0.002;
+            particlesGroup.rotation.x += 0.0008;
+            particlesGroup.rotation.y += 0.0015;
 
-            // Camera follow mouse smoothly
-            camera.position.x += (mouseX * 2 - camera.position.x) * 0.05;
-            camera.position.y += (-mouseY * 2 - camera.position.y) * 0.05;
+            // Smooth camera follow mouse
+            camera.position.x += (mouseX * 2.5 - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY * 2.5 - camera.position.y) * 0.05;
             camera.lookAt(scene.position);
 
             renderer.render(scene, camera);
