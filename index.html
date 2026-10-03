@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excellence Tuition Classes | 3D Interactive Experience</title>
+    <title>Excellence Tuition Classes | 3D Scroll Experience</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -11,12 +11,12 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #050b14;
+            background-color: #030712;
             color: #ffffff;
             overflow-x: hidden;
             margin: 0;
         }
-        /* 3D Canvas fixed in background */
+        /* Fixed 3D Canvas Background */
         #canvas-container {
             position: fixed;
             top: 0;
@@ -26,26 +26,25 @@
             z-index: 1;
             pointer-events: none;
         }
-        /* HTML Content layered above canvas with scroll height */
-        .content-layer {
+        /* Scrollable Layers Container */
+        .scroll-container {
             position: relative;
             z-index: 2;
-            height: 500vh; /* Long scroll for interactive stages */
         }
-        .section-step {
-            height: 100vh;
+        section {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 2rem;
+            padding: 4rem 2rem;
+            position: relative;
         }
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #050b14;
+            background: #030712;
         }
         ::-webkit-scrollbar-thumb {
             background: #3b82f6;
@@ -55,132 +54,129 @@
 </head>
 <body>
 
-    <!-- 3D Three.js Interactive Scene Container -->
+    <!-- 3D WebGL Canvas for Gate & Classroom Environment -->
     <div id="canvas-container"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-[#050b14]/80 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-wider text-blue-500">EXCELLENCE<span class="text-amber-400">TUITION</span></div>
-        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-            <a href="#gate-stage" class="hover:text-blue-400 transition">Gate</a>
-            <a href="#courses-stage" class="hover:text-blue-400 transition">Batches</a>
-            <a href="#students-stage" class="hover:text-blue-400 transition">Star Students</a>
-            <a href="#board-stage" class="hover:text-blue-400 transition">Blackboard & Contact</a>
-        </div>
-        <a href="#board-stage" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-blue-500/30">Join Class</a>
-    </nav>
+    <!-- Main Content Flow matching your Structure -->
+    <div class="scroll-container">
 
-    <!-- Scrollable Content Layer -->
-    <div class="content-layer">
-
-        <!-- Stage 1: Gate Intro -->
-        <section id="gate-stage" class="section-step">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl leading-tight drop-shadow-lg">
-                Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">Excellence Tuition</span>
-            </h1>
-            <p class="mt-4 text-gray-300 max-w-xl text-base md:text-lg bg-black/40 px-4 py-2 rounded-xl backdrop-blur-sm">
-                👇 Scroll down to open the gates and enter the virtual classroom.
-            </p>
+        <!-- 1. STARTING GATE SECTION -->
+        <section id="gate-section" class="text-center">
+            <div class="bg-black/60 border border-blue-500/30 p-8 rounded-3xl backdrop-blur-md shadow-2xl max-w-2xl mx-auto">
+                <span class="text-amber-400 font-semibold tracking-wider text-sm uppercase">Welcome to 3D Experience</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mt-2 mb-4">
+                    Excellence <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">Tuition Classes</span>
+                </h1>
+                <p class="text-gray-300 text-sm md:text-base">
+                    👇 Scroll down or drag your finger to unlock the gates and enter the classroom.
+                </p>
+            </div>
         </section>
 
-        <!-- Stage 2: Classroom Courses -->
-        <section id="courses-stage" class="section-step max-w-7xl mx-auto w-full px-6">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold">Inside Classroom: Specialized <span class="text-blue-400">Batches</span></h2>
-                <p class="text-gray-400 mt-2">Designed for absolute mastery and top board results.</p>
+        <!-- 2. CLASSROOM COURSES / BATCHES SECTION -->
+        <section id="courses-section" class="max-w-7xl mx-auto w-full">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold">Inside Classroom: <span class="text-blue-400">Our Batches</span></h2>
+                <p class="text-gray-400 text-sm mt-2">Structured learning paths engineered for top-tier results.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl backdrop-blur-md text-left shadow-xl">
-                    <div class="text-blue-400 text-2xl mb-2 font-bold">01</div>
-                    <h3 class="text-lg font-bold mb-1">Foundation Science (9th - 10th)</h3>
-                    <p class="text-gray-400 text-xs mb-4">Strong conceptual clarity in Physics, Chemistry & Math.</p>
-                    <span class="text-amber-400 font-semibold text-xs">Seats Available</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                <div class="bg-gray-900/80 border border-gray-800 p-8 rounded-2xl backdrop-blur-md shadow-xl hover:border-blue-500 transition">
+                    <div class="text-blue-400 font-bold text-3xl mb-3">01</div>
+                    <h3 class="text-xl font-bold mb-2">Foundation Science</h3>
+                    <p class="text-gray-400 text-xs mb-4">Targeted for classes 9th & 10th with deep concept clarity.</p>
+                    <span class="text-amber-400 text-xs font-semibold">Active Enrollments</span>
                 </div>
-                <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl backdrop-blur-md text-left shadow-xl">
-                    <div class="text-blue-400 text-2xl mb-2 font-bold">02</div>
-                    <h3 class="text-lg font-bold mb-1">Senior Secondary (11th - 12th)</h3>
-                    <p class="text-gray-400 text-xs mb-4">Advanced problem solving and intensive board preparation.</p>
-                    <span class="text-amber-400 font-semibold text-xs">Batch Starting Soon</span>
+                <div class="bg-gray-900/80 border border-gray-800 p-8 rounded-2xl backdrop-blur-md shadow-xl hover:border-blue-500 transition">
+                    <div class="text-blue-400 font-bold text-3xl mb-3">02</div>
+                    <h3 class="text-xl font-bold mb-2">Senior Secondary</h3>
+                    <p class="text-gray-400 text-xs mb-4">Rigorous 11th & 12th board preparation with personal mentoring.</p>
+                    <span class="text-amber-400 text-xs font-semibold">Limited Seats</span>
                 </div>
-                <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl backdrop-blur-md text-left shadow-xl">
-                    <div class="text-blue-400 text-2xl mb-2 font-bold">03</div>
-                    <h3 class="text-lg font-bold mb-1">Competitive Entrance Prep</h3>
-                    <p class="text-gray-400 text-xs mb-4">Targeted shortcuts, analytical skills & rigorous mock tests.</p>
-                    <span class="text-amber-400 font-semibold text-xs">Enrollment Open</span>
+                <div class="bg-gray-900/80 border border-gray-800 p-8 rounded-2xl backdrop-blur-md shadow-xl hover:border-blue-500 transition">
+                    <div class="text-blue-400 font-bold text-3xl mb-3">03</div>
+                    <h3 class="text-xl font-bold mb-2">Entrance Mastery</h3>
+                    <p class="text-gray-400 text-xs mb-4">Competitive problem-solving techniques and weekly mock modules.</p>
+                    <span class="text-amber-400 text-xs font-semibold">Open Batch</span>
                 </div>
             </div>
         </section>
 
-        <!-- Stage 3: Star Students Wall & Portfolios -->
-        <section id="students-stage" class="section-step max-w-7xl mx-auto w-full px-6">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold">Star <span class="text-amber-400">Performers Wall</span></h2>
-                <p class="text-gray-400 text-sm mt-1">Click on any student card to view their complete portfolio.</p>
+        <!-- 3. STUDENTS CARDS & PORTFOLIO WALL -->
+        <section id="students-section" class="max-w-7xl mx-auto w-full">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold">Star Performers <span class="text-amber-400">Wall</span></h2>
+                <p class="text-gray-400 text-sm mt-2">Click any student card to explore their individual academic portfolio.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                <!-- Student 1 -->
-                <div onclick="openPortfolio('Aman Sharma', 'Class 12th Science', '98.4% Topper', 'Mastered physics problem-solving and topped district mock exams.')" 
-                     class="bg-gray-900/90 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400 transition text-center shadow-xl">
-                    <div class="w-16 h-16 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-3 flex items-center text-xl font-bold justify-center text-white">AS</div>
-                    <h3 class="text-base font-bold">Aman Sharma</h3>
-                    <p class="text-blue-400 text-xs">Class 12th Topper</p>
-                    <span class="mt-3 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">98.4%</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                <!-- Student Card 1 -->
+                <div onclick="openStudentPortfolio('Aman Sharma', 'Class 12th Science', '98.4% Board Score', 'Aman demonstrated exceptional analytical skills in Physics and Chemistry, securing district-level rank through continuous assessment logs.')" 
+                     class="bg-gray-900/90 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400 transition text-center shadow-xl backdrop-blur-md">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white shadow-lg">AS</div>
+                    <h3 class="text-lg font-bold">Aman Sharma</h3>
+                    <p class="text-blue-400 text-xs mt-1">Class 12th Topper</p>
+                    <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">98.4% Score</div>
                 </div>
-                <!-- Student 2 -->
-                <div onclick="openPortfolio('Priya Verma', 'Class 10th Scholar', '97.2% Aggregate', 'Demonstrated unmatched consistency in mathematics and science Olympiads.')" 
-                     class="bg-gray-900/90 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400 transition text-center shadow-xl">
-                    <div class="w-16 h-16 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-3 flex items-center text-xl font-bold justify-center text-white">PV</div>
-                    <h3 class="text-base font-bold">Priya Verma</h3>
-                    <p class="text-blue-400 text-xs">Class 10th Scholar</p>
-                    <span class="mt-3 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">97.2%</span>
+                <!-- Student Card 2 -->
+                <div onclick="openStudentPortfolio('Priya Verma', 'Class 10th Scholar', '97.2% Aggregate', 'Priya maintained top standing across Mathematics Olympiads with rigorous dedication and daily problem tracking.')" 
+                     class="bg-gray-900/90 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400 transition text-center shadow-xl backdrop-blur-md">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white shadow-lg">PV</div>
+                    <h3 class="text-lg font-bold">Priya Verma</h3>
+                    <p class="text-blue-400 text-xs mt-1">Class 10th Scholar</p>
+                    <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">97.2% Aggregate</div>
                 </div>
-                <!-- Student 3 -->
-                <div onclick="openPortfolio('Rahul Rathore', 'Entrance Batch', '99.1 %ile', 'Focused on conceptual applications for top-tier entrance success.')" 
-                     class="bg-gray-900/90 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400 transition text-center shadow-xl">
-                    <div class="w-16 h-16 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-3 flex items-center text-xl font-bold justify-center text-white">RR</div>
-                    <h3 class="text-base font-bold">Rahul Rathore</h3>
-                    <p class="text-blue-400 text-xs">Competitive Star</p>
-                    <span class="mt-3 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold">99.1 %ile</span>
+                <!-- Student Card 3 -->
+                <div onclick="openStudentPortfolio('Rahul Rathore', 'Entrance Batch', '99.1 Percentile', 'Rahul focused heavily on shortcut methodologies and concept mapping, converting hard work into top-tier entrance success.')" 
+                     class="bg-gray-900/90 border border-gray-800 p-6 rounded-2xl cursor-pointer hover:border-amber-400 transition text-center shadow-xl backdrop-blur-md">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-amber-400 rounded-full mx-auto mb-4 flex items-center text-2xl font-bold justify-center text-white shadow-lg">RR</div>
+                    <h3 class="text-lg font-bold">Rahul Rathore</h3>
+                    <p class="text-blue-400 text-xs mt-1">Competitive Star</p>
+                    <div class="mt-4 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">99.1 Percentile</div>
                 </div>
             </div>
         </section>
 
-        <!-- Stage 4: Blackboard Teacher & Contact Form -->
-        <section id="board-stage" class="section-step max-w-3xl mx-auto w-full px-6">
-            <div class="bg-emerald-950/40 border-4 border-emerald-800/80 p-8 rounded-3xl backdrop-blur-md shadow-2xl text-center w-full">
-                <div class="text-amber-400 font-mono text-sm mb-1">👩‍🏫 Live Blackboard Session</div>
-                <h2 class="text-2xl font-bold text-white mb-4">"Education is the passport to the future."</h2>
-                <p class="text-emerald-200 text-xs mb-6">Book your free demo session or inquiry right below:</p>
+        <!-- 4. END SECTION: 3D BLACKBOARD & TEACHER WITH INQUIRY FORM -->
+        <section id="blackboard-section" class="max-w-4xl mx-auto w-full">
+            <div class="bg-emerald-950/50 border-4 border-emerald-800 p-8 md:p-12 rounded-3xl backdrop-blur-md shadow-2xl w-full text-center relative overflow-hidden">
+                <!-- Blackboard Header Simulation -->
+                <div class="absolute top-4 left-6 text-emerald-400 font-mono text-xs uppercase tracking-widest">Teacher's Live Desk</div>
                 
-                <form class="space-y-3 text-left" onsubmit="event.preventDefault(); alert('Inquiry registered successfully! We will contact you soon.');">
+                <div class="mt-4 mb-8">
+                    <div class="w-16 h-16 bg-amber-500 rounded-full mx-auto mb-3 flex items-center text-2xl justify-center text-gray-950 font-bold shadow-lg">👨‍🏫</div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">"Shaping Bright Futures With Concept Mastery"</h2>
+                    <p class="text-emerald-200 text-xs md:text-sm">Connect with our lead faculty or register your demo inquiry right here on the board.</p>
+                </div>
+
+                <!-- Inquiry Form integrated on Blackboard -->
+                <form class="space-y-4 text-left max-w-xl mx-auto bg-black/40 p-6 rounded-2xl border border-emerald-700/50" onsubmit="event.preventDefault(); alert('Inquiry successfully registered on the teacher desk!');">
                     <div>
-                        <label class="block text-xs text-gray-300 mb-1">Your Name</label>
-                        <input type="text" required class="w-full bg-black/50 border border-emerald-700/60 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-400" placeholder="Enter name">
+                        <label class="block text-xs text-emerald-300 mb-1">Student Name</label>
+                        <input type="text" required class="w-full bg-emerald-950/80 border border-emerald-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" placeholder="Enter full name">
                     </div>
                     <div>
-                        <label class="block text-xs text-gray-300 mb-1">Phone Number</label>
-                        <input type="tel" required class="w-full bg-black/50 border border-emerald-700/60 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-400" placeholder="Mobile number">
+                        <label class="block text-xs text-emerald-300 mb-1">Phone Number</label>
+                        <input type="tel" required class="w-full bg-emerald-950/80 border border-emerald-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" placeholder="Enter mobile number">
                     </div>
-                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 rounded-lg text-sm transition shadow-lg">Submit Inquiry</button>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-gray-950 font-bold py-3 rounded-xl text-sm transition shadow-lg">Book Free Demo Session</button>
                 </form>
             </div>
         </section>
 
     </div>
 
-    <!-- Student Portfolio Modal -->
+    <!-- Individual Student Portfolio Popup Modal -->
     <div id="portfolioModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden justify-center items-center px-4">
         <div class="bg-gray-900 border border-gray-800 w-full max-w-md p-6 rounded-3xl relative shadow-2xl">
-            <button onclick="closePortfolio()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
-            <div id="modalContent"></div>
+            <button onclick="closeStudentPortfolio()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+            <div id="modalPortfolioContent"></div>
         </div>
     </div>
 
-    <!-- Three.js Library -->
+    <!-- Three.js Library CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script>
-        // 1. Three.js Scene Setup (Gate Opening & 3D Environment)
+        // --- THREE.JS SCROLL-CONTROLLED SCENE SETUP ---
         const container = document.getElementById('canvas-container');
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -191,80 +187,77 @@
         container.appendChild(renderer.domElement);
 
         // Lights
-        scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-        const pointLight = new THREE.PointLight(0x3b82f6, 2, 50);
+        scene.add(new THREE.AmbientLight(0xffffff, 1));
+        const pointLight = new THREE.PointLight(0x3b82f6, 3, 50);
         pointLight.position.set(0, 5, 5);
         scene.add(pointLight);
 
-        // Create 3D Gate Doors (Left and Right Doors)
-        const doorGroup = new THREE.Group();
-        const doorMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.3, metalness: 0.8 });
+        // 1. Create the Entrance Gate Doors (Left & Right)
+        const gateGroup = new THREE.Group();
+        const doorMaterial = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.2, metalness: 0.8 });
         
-        const leftDoorGeo = new THREE.BoxGeometry(3, 6, 0.2);
-        const leftDoor = new THREE.Mesh(leftDoorGeo, doorMat);
+        const leftDoor = new THREE.Mesh(new THREE.BoxGeometry(3, 7, 0.3), doorMaterial);
         leftDoor.position.set(-1.5, 0, 0);
-        doorGroup.add(leftDoor);
+        gateGroup.add(leftDoor);
 
-        const rightDoorGeo = new THREE.BoxGeometry(3, 6, 0.2);
-        const rightDoor = new THREE.Mesh(rightDoorGeo, doorMat);
+        const rightDoor = new THREE.Mesh(new THREE.BoxGeometry(3, 7, 0.3), doorMaterial);
         rightDoor.position.set(1.5, 0, 0);
-        doorGroup.add(rightDoor);
+        gateGroup.add(rightDoor);
+        
+        scene.add(gateGroup);
 
-        scene.add(doorGroup);
-
-        // Classroom background particles / ambient structures
+        // 2. Classroom ambient objects inside
         const classroomGroup = new THREE.Group();
-        const boxGeo = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-        const boxMat = new THREE.MeshStandardMaterial({ color: 0x3b82f6, wireframe: true });
-        for(let i=0; i<30; i++) {
-            const mesh = new THREE.Mesh(boxGeo, boxMat);
-            mesh.position.set((Math.random()-0.5)*20, (Math.random()-0.5)*15, -5 - Math.random()*15);
+        const geo = new THREE.BoxGeometry(0.6, 0.6, 0.6);
+        const mat = new THREE.MeshStandardMaterial({ color: 0x3b82f6, wireframe: true });
+        for(let i=0; i<35; i++) {
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.set((Math.random()-0.5)*25, (Math.random()-0.5)*20, -10 - Math.random()*20);
             classroomGroup.add(mesh);
         }
         scene.add(classroomGroup);
 
-        camera.position.z = 8;
+        camera.position.z = 7;
 
-        // Scroll progress mapping to 3D Gate animation & Camera movement
-        let scrollPercent = 0;
+        // Scroll listener to animate Gate Opening & Camera Translation inside classroom
         window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
+            const scrollTop = window.scrollY;
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            scrollPercent = scrollTop / maxScroll; // 0 to 1
+            const progress = scrollTop / maxScroll; // 0 to 1
 
-            // Gate opens as user scrolls down from top
-            if (scrollPercent < 0.3) {
-                let openProgress = scrollPercent / 0.3; // 0 to 1 in first 30% scroll
-                leftDoor.position.x = -1.5 - (openProgress * 3.5);
-                rightDoor.position.x = 1.5 + (openProgress * 3.5);
-                doorGroup.visible = true;
+            // Gate opens smoothly during the first 25% of the scroll
+            if (progress < 0.25) {
+                let openFactor = progress / 0.25; // 0 to 1
+                leftDoor.position.x = -1.5 - (openFactor * 4);
+                rightDoor.position.x = 1.5 + (openFactor * 4);
+                gateGroup.visible = true;
             } else {
-                doorGroup.visible = false; // Hide gate once fully opened & inside classroom
+                gateGroup.visible = false; // Once inside, gate is hidden
             }
 
-            // Move camera forward slightly into the classroom on scroll
-            camera.position.z = 8 - (scrollPercent * 4);
+            // Move camera forward into the virtual room based on scroll
+            camera.position.z = 7 - (progress * 5);
         });
 
         // Animation Loop
         function animate() {
             requestAnimationFrame(animate);
-            classroomGroup.rotation.y += 0.002;
+            classroomGroup.rotation.y += 0.0015;
             renderer.render(scene, camera);
         }
         animate();
 
-        // Window resize
+        // Resize handler
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        // 2. Student Portfolio Modal Functions
-        function openPortfolio(name, batch, score, bio) {
+        // --- INDIVIDUAL STUDENT PORTFOLIO MODAL LOGIC ---
+        function openStudentPortfolio(name, batch, score, bio) {
             const modal = document.getElementById('portfolioModal');
-            const content = document.getElementById('modalContent');
+            const content = document.getElementById('modalPortfolioContent');
             
             content.innerHTML = `
                 <div class="text-center">
@@ -272,14 +265,14 @@
                     <h2 class="text-xl font-bold">${name}</h2>
                     <p class="text-blue-400 text-xs mt-0.5">${batch}</p>
                     <div class="my-3 inline-block bg-amber-400/10 text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/20">${score}</div>
-                    <p class="text-gray-300 text-xs leading-relaxed bg-black/40 p-3 rounded-xl border border-gray-800 text-left mt-2">${bio}</p>
+                    <p class="text-gray-300 text-xs leading-relaxed bg-black/40 p-4 rounded-xl border border-gray-800 text-left mt-2">${bio}</p>
                 </div>
             `;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
 
-        function closePortfolio() {
+        function closeStudentPortfolio() {
             const modal = document.getElementById('portfolioModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
